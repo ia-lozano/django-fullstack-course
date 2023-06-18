@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML labels</title>
+    </head>
+    <body>
+        <form>
+            <!-- The url is supossed to change when you type anything into an input tag -->
+            <p>Enter Email:</p>
+            <input type="email" name-="useremail">
+            <input type="submit" value="login">
+            <p>After enter a valid email, and clicking "login", look at what happended to the url</p>
+        </form>
+        <hr>
+        <!-- You can go to another website or perform any action by adding actions to the form tag -->
+        <form action="https://www.google.com/" method="get">
+            <p>Enter any text</p>
+            <input type="text" name="userinput">
+            <input type="submit" value="Go to Google.com">
+        </form>
+        <hr>
+        <form>
+            <!-- Use labels to goup the text and the input field on the same code block -->
+            <h3>Using labels to put the label and the input in the same code block</h3>
+            <label>
+                Enter Text:
+                <input type="text">
+            </label>
+        <hr>
+        <form>
+            <!-- A for parameter prevents you from repeating the label tag multiple times -->    
+            <h3>Using a for parameter into the label tag</h3>
+            <label for="userimput">Enter Input:</label>
+
+            <input id="userinput" type="text" placeholder="enter text here">
+        </form>
+        <hr>
+        <form>
+            <!-- a little bit more about input parameters -->
+            <input type="text" placeholder="not required">
+            <input type="text" placeholder="requiered" required>
+            <input type="submit" value="submit"> 
+        </form>
+    </body>
+</html>
