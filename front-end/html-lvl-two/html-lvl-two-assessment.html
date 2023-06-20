@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset ='utf-8'>
+        <title>HTML lvl 2 assessment</title>
+    </head>
+    <body>
+        <h1>Course Sign Up Page</h1>
+        <p>Please Note: First Name, Last Name, Password, and Email are required</p>
+
+        <form action="assessment_extra_credit.html" method="get">
+            <!-- Start with the name and email/password fields (all required) -->
+            <label for="fm">First Name</label>
+            <input id="fm" type="text" name="" placeholder="First Name" required>
+
+            <label for="lm">Last Name</label>
+            <input id="lm" type="text" name="" placeholder="Last Name" required>
+
+            <!-- We can use an empty paragraph because we haven't seen anything about CSS yet -->
+            <p></p>
+
+            <label for="mail">Email:</label>
+            <input id="mail" type="email" name="" value="" placeholder="email@domain.com" required>
+
+            <label for="pass">Password:</label>
+            <input id="pass" type="password" name="" value="" required>
+
+            <!-- Then we use a radious so the user can select if under or over 18 YO -->
+            <p>Are you over the age of 18?</p>
+
+            <label for="y">Yes:</label>
+            <input id="y" type="radio" name="age" value="yes">
+
+            <label for="n">No:</label>
+            <input id="n" type="radio" name="age" value="no">
+
+            <!-- And last but not least, we ask the users about they payment method with a drop down list-->
+            <p>Do you hacve a Credit Card or PayPal?</p>
+            <select name="payment">
+                <option value="cc">Credit Card</option>
+                <option value="pp">PayPal</option>
+            </select>
+            <p></p>
+            <input type="submit" value="Sign Up">
+
+        </form>
+
+    </body>
+</html>
