@@ -1,0 +1,59 @@
+/* For more selectors just google "CSS selector reference" */
+
+/* No matter what class it is or where the div is, as long as it has the div tag, it is going to be red*/
+div{
+    color: lightgray;
+}
+
+/* We refer to a class by using a dot . before the class name */
+
+.firstdiv{
+    background-color: black;
+    font-family: 'Comic Sans MS';
+}
+
+.seconddiv{
+    background-color: blueviolet;
+    font-family: 'Courier New';
+}
+
+/* We can refer to an id by using a hashtag # */
+
+#singledout{
+    color: darkgreen;
+    text-decoration: line-through;
+    font-size: large;
+}
+
+/* The ultimate selector is the asterisk (*), it will override all styles except the ids */
+/* Use the asterisk with caution! */
+
+*{
+    font-size: x-large;
+    cursor: progress;
+}
+
+/* To combine different elements, use the + sign. For instance, we're going to apply a style to 
+   all the ul elements next to an h3 element */
+
+h3 + ul{
+    border: 4px dotted purple;
+}
+
+/* The descendants are useful to grab all elements inside another tag */
+
+li a{
+    background-color: aqua;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* For attributes, you can select any tag with a particular reference */
+
+li a[href="https://pypi.org/"]{
+    font-family: 'Comic Sans MS';
+    border: 5px solid orange;
+}
+
+/* IMPORTANT: Be aware of specificity: some styles may override others due to specificity, for instance
+   we could override a style of a general tag (like a li, or a div) by specifying the .class and
+   we could override the styles given in the class selector by adding styles to an id # */

@@ -1,0 +1,54 @@
+/* First we give color to all the background, we will override it later for some elements*/
+*{
+    background-color: lightblue;
+}
+
+/* no need to use a .class or an #id because this is the only h1 tag in the HTML code*/ 
+h1 {
+    border: 1px solid black;
+}
+
+/*Again, there is no need to use .class or #id because all the h2 tags are going to be colored in purple*/
+h2 {
+    color: purple;
+}
+
+/* We nned only a black-text p tag, we only want to color the background of two of them */
+div p {
+    background-color: #fffca5;
+}
+
+/* We use an #id to specify only one element of the ordered list tag */
+#itemone {
+    color:purple;
+    text-decoration: overline;
+}
+
+/* Then we color only the list element with an anchor tag with a specific href*/
+li a[href='https://www.google.com/']{
+    color: blue;
+}
+
+/* We override the lightblue background color from the * selector for all the textarea elements */
+textarea {
+    background-color: white;
+}
+
+/* This #id is meant for adding a border only to one of the textarea elements*/ 
+#textblock {
+    border: 5px solid gray;
+}
+
+/* with this, we override the lightblue background from the * selector */
+input {
+    background-color: white;
+    border: 2px solid darkred;
+}
+
+/* Finally we add a blue background to all the elements with the .class footer,
+   NOTE that the background color was overrided from the * selector but the textarea
+   still have white background (.footer was overrided by the global input tag style) */
+.footer {
+    background-color: blue;
+    border: 4px dashed yellow;
+}

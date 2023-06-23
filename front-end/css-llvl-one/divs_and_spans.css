@@ -1,0 +1,25 @@
+body{
+    /* background-color: gray; |Yes it could be a color or....*/
+    background: url(https://icimod.b-cdn.net/wp-content/uploads/2022/12/home3.jpg);
+    background-repeat: repeat /* or no-repeat */;
+}
+
+/* This will change the background of the content inside the div only */
+div{
+    background-color: lightblue;
+    border-color: blue;
+    border-width: thick; /* We can also specify this with pixles (5px, 10px, etc) */
+    border-style: dotted;
+}
+
+/* This will affect all the paragraphs (inside or outside a div) */
+p{
+    color: darkgreen;
+}
+
+/* span tag allow us to pick anything inside that span*/
+span{
+    background-color: aquamarine;
+    color: red;
+}
+
