@@ -1,0 +1,27 @@
+h1 {
+    font-family: 'Comic Sans MS';
+    text-decoration: underline;
+}
+
+p {
+    font-family: 'Dancing Script', cursive; /* we get this line from fonts.google.com */
+    font-style: italic;
+    font-weight: bold;
+    text-align: justify;
+}
+
+/* Here we define a default font-size, 20px in this case */
+body {
+    font-size: 20px;
+}
+
+/* Then we can call an id and set a font-size as a ratio of the default font-size defined before 
+   NOTE that we used "2.0", which means that this text is going to be twice as large as the default
+   font-size */
+#two {
+    font-size: 1.0em
+}
+
+/* For more info about fonts please refer to CSS Font Stack */
+
+

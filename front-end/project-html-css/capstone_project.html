@@ -1,0 +1,45 @@
+<!-- Recreate a landing page which has the following content:
+     - A heading 1
+     - A heading 2
+     - 2 paragraphs
+     - Another heading 2
+     - A form to sign up (first name, last name and email)
+     - A "Sign me up button"
+    
+     About the CSS styles:
+     - Make tha page have a border on the sides and the bottom but not the top
+     - Align all the content to the center of the screen
+     - The sign up button must be "big" and must have rounded borders
+    
+     Finally when you fill the form, the sign up buttom must take you
+     to a thank you page. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML & CSS Capstone Project</title>
+        <link rel="stylesheet" href="capstone_project.css">
+    </head>
+    <body>
+        <h1>Welcome to the Landing Page</h1>
+        <h2>We're a start-up that does something</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2>Sign up for our upcoming launch!</h2>
+
+        <form class="emailform" action="thankyou.html" method="get">
+            <label for="fname">First Name: </label><br>
+            <input type="text" id="fname" required><br>
+            
+            <label for="lname">Second Name: </label><br>
+            <input type="text" id="lname" required><br>
+            
+            <label for="email">Email: </label><br>
+            <input type="email" id="email" required><br>
+        
+            <input type="submit" value="Sign me up!" id="button">
+        </form>
+    </body>
+</html>

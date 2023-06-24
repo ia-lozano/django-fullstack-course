@@ -1,0 +1,54 @@
+/* First we add a custom font from fonts.google.com or any other fonts site */
+h1 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Adding styles for the table */
+table {
+    border: 2px solid white;
+    width: 80%;
+    margin: auto;
+}
+
+/* Then we give each table cell a margin and a height */
+tr td {
+    border: 5px solid white;
+    height: 450px;
+}
+
+/* Last but not least, we asign a color to each table cell (I used #id to separate cells) */ 
+#first {
+    background-color: #F94144;
+}
+
+#second {
+    background-color: #43AA8B;
+}
+
+#third {
+    background-color: #277DA1;
+}
+
+#fourth {
+    background-color: #F9844A;
+}
+
+#fifth {
+    background-color: #F9C74F;
+}
+
+/* This could also work:
+
+table {
+    margin: auto;
+}
+
+td {
+    background-color: black;
+    height: 200px;
+    width: 100px;
+}
+
+*/
+

@@ -1,0 +1,18 @@
+#top {
+    border: 4px solid blue;
+    /* This will make the border take only a % of the page size */
+    width: 25%; 
+    text-align: center;
+    /* Margin will define the blue box position. margin: top right bottom left pixels */
+    /* Use auto to auto center the margin */
+    margin: auto;
+}
+
+#bottom {
+    border: 4px solid red;
+    width: 50%;
+    text-align: center;
+    /* Padding defines space between the content and the border*/
+    padding: 200px;
+    margin: auto;
+}
