@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <!-- We will be using bootstrap 3.3 for this section!! -->
+    <head>
+        <meta charset="utf-8">
+        <title>Nav Bars with Bootstrap</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top"> <!-- navbar-fixed-top fixes the navbar to the top of the page-->
+            <div class="navbar-header">
+            
+            <!-- This part collapses the navbar as we make the screen narrow -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="https://getbootstrap.com/docs/3.3/components/#navbar" class="navbar-brand">Navbars Bootstrap 3.3</a>
+            </div>
+            
+            <div class="container">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> <!-- This container centers the navbar -->
+            <ul class="nav navbar-nav">
+                <li><a href="#">Item One</a></li>
+                <li><a href="#">Item Two</a></li>
+                <!-- This is a dropdown menu (it needs JS an JQuery to work) -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">On the Right!</a></li>
+            </ul>
+        </div>
+        </div>
+        </nav>
+
+        <!-- This part causes the dropdown menu to work -->
+        <script
+        src="http://code.jquery.com/jquery-3.1.1.js"
+        integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+        crossorigin="anonymous"></script>  <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      
+        <div class="container">
+        <div class="jumbotron">
+            <h1>Hello</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis laborum cumque, optio reiciendis architecto ab corporis fugiat voluptatibus nam harum itaque. Adipisci odit tempore ullam accusantium? Tempora nobis eos ex?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus voluptatem vel fuga adipisci nesciunt placeat laudantium! Ullam quibusdam suscipit, minus tempora magnam quia dicta iste provident! Consequuntur fugiat debitis iusto!</p>    
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis laborum cumque, optio reiciendis architecto ab corporis fugiat voluptatibus nam harum itaque. Adipisci odit tempore ullam accusantium? Tempora nobis eos ex?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus voluptatem vel fuga adipisci nesciunt placeat laudantium! Ullam quibusdam suscipit, minus tempora magnam quia dicta iste provident! Consequuntur fugiat debitis iusto!</p>    
+        </div>
+        </div>
+  
+        <div class="container">
+            <h2>More Stuff</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis voluptates nobis quo inventore at eum dolor neque nesciunt! Provident fugiat saepe impedit esse! Cumque dolorum at eius commodi, consequatur in?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate exercitationem veritatis minima corrupti animi sunt at et, sequi suscipit odit iste consequatur amet distinctio alias. Rem odit ut animi quos!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis laborum cumque, optio reiciendis architecto ab corporis fugiat voluptatibus nam harum itaque. Adipisci odit tempore ullam accusantium? Tempora nobis eos ex?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus voluptatem vel fuga adipisci nesciunt placeat laudantium! Ullam quibusdam suscipit, minus tempora magnam quia dicta iste provident! Consequuntur fugiat debitis iusto!</p>    
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis laborum cumque, optio reiciendis architecto ab corporis fugiat voluptatibus nam harum itaque. Adipisci odit tempore ullam accusantium? Tempora nobis eos ex?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus voluptatem vel fuga adipisci nesciunt placeat laudantium! Ullam quibusdam suscipit, minus tempora magnam quia dicta iste provident! Consequuntur fugiat debitis iusto!</p>    
+        </div>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse"> <!-- inverse makes the bar black -->
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Welcome</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="bootstrap_project_login_solution.html">Log In</a></li>
+            </ul>
+        </nav>
+        
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Coffee Lover Project</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fugit voluptatum nisi hic at deserunt, id autem magni, eum modi harum corrupti incidunt aliquid, quasi voluptas voluptate ipsam non ex!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quae, voluptates nam vitae molestias debitis optio voluptatum qui asperiores voluptate eveniet sunt sit minima assumenda nisi maiores ipsa explicabo laudantium?</p>
+            </div>
+        </div>
+        <!-- Creating the grid for coffee pictures -->
+        <div class="container">
+            <h2>Pictures of coffee</h2>
+            <div class="row">
+                <!-- Adding the grid:
+                     - When the screen is large, each element should be 4 columns so it shows three pictures
+                     - When the screen is xsmall, each element should be 6 columns so it shows two pictures
+                     - Remember that we have a total of twelve columns in Bootstrap
+                -->
+
+                <!-- IMPORTANT: All the 6 elements must be into the same div .row tag!!!! -->
+                <div class="col-lg-4 col-xs-6 thumbnail"><img src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/04LDEYRW59.jpg" alt=""></div>
+                <div class="col-lg-4 col-xs-6 thumbnail"><img src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/04LDEYRW59.jpg" alt=""></div>
+                <div class="col-lg-4 col-xs-6 thumbnail"><img src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/04LDEYRW59.jpg" alt=""></div>
+                <div class="col-lg-4 col-xs-6 thumbnail"><img src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/04LDEYRW59.jpg" alt=""></div>
+                <div class="col-lg-4 col-xs-6 thumbnail"><img src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/04LDEYRW59.jpg" alt=""></div>
+                <div class="col-lg-4 col-xs-6 thumbnail"><img src="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/04LDEYRW59.jpg" alt=""></div>
+            </div>
+        </div>
+    </body>
+</html>
