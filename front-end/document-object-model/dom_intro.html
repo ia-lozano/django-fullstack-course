@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DOM intro</title>
+    </head>
+    <body>
+        <h1 id="header">This is the header</h1>
+        <p>
+            You will use the javascript file to continually change the size of the header, but first
+            we need to learn how to use javascript to actually grab the HTML objects from the DOM.
+        </p>
+        <p>Here are some important document attributes:</p>
+        <ul class="myul">
+            <li id="pickme">document.URL</li>
+            <li>document.body</li>
+            <li>document.head</li>
+            <li>docuument.links</li>
+        </ul>
+        <p>Then we also have methods we can use to grab HTML elements:</p>
+        <ul class="myul">
+            <li>document.getElementById()</li>
+            <li>document.getElementByClassName()</li>
+            <li>document.getElementByTagName()</li>
+            <li>document.querySelector() - Returns the first object matching the CSS style selector</li>
+            <li>document.querySelectorAll() - Returns all objects matching the CSS style selector</li>
+        </ul>
+        <script src="dom_intro.js"></script>
+    </body>
+</html>
