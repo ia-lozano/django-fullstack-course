@@ -1,0 +1,6 @@
+For security, install the following libraries:
+
+NOTE: Remember to install these within your Django environment.
+
+- pip install bcrypt
+- pip install django[argon2]

@@ -1,0 +1,81 @@
+1. First of all, install Anaconda and add it to your system paths.
+To this by going to "Editing System Variables"(Windows only), then
+add the anaconda3/scripts path 
+
+2. If you're using windows, set the system execution policy to
+unrestricted in powershell.
+
+Something like: Set-ExecutionPolicy Unrestricted
+Or, just use the Anaconda command prompt... (not sure If
+Anaconda prompt will work the same...)
+
+3. Reference the Anaconda documentation about Environments, it goes
+like this:
+
+# For a new blank environment
+conda create --name envName
+
+# Or, create an environment with a specific package
+conda create -n envName [insert package name here]
+
+# For instance:
+conda create -n myDjangoEnv django
+
+4. Type the command django-admin starproject [insert project name]
+in your command prompt, after that you should see a folder with
+the same name as your project and some .py files.
+
+Now... what are all those .py files?
+
+__init__.py
+- A blank file that let's python know that this directory can
+be treated as a package
+
+settings.py
+- Actually store all your project settings
+
+urls.py
+- This script will store all URL patterns for your project.
+Basically the different pages of your web application.
+
+wsgi.py
+- This script acts as the Web Server Gateway Interface. it will
+later on help us deploy our web app to production.
+
+manage.py
+- The most used script, it will be associated with many
+commands as we build our web app.
+
+5. Run your Django web app
+python manage.py runserver
+python manage.py startapp [app name here]
+
+6. Now lets set up our database (sqlite by default)
+- First, create your models in the [app]/models.py file (reference Django docs)
+- go to the [project]/apps.py and add the '[app].apps.[App]Config' line to the
+  INSTALLED_APPS list.
+- After changing your models, run the following commands:
+  python manage.py makemigrations (create migrations for models changes)
+  python manage.py migrate (to apply those changes)
+
+7. Now that we have set up our database, we can play with the Django API
+   use the command: python manage.py shell
+
+8. Creating an admin user:
+   python manage.py createsuperuser
+   
+   Enter name, email and password (twice)
+
+   Then start the dev server python manage.py runserver and go to 
+   http://127.0.0.1:8000/admin/
+
+9. Make your app modifiable in the admin view
+   go to [app]/admin.py and register your models, add the following lines:
+   
+   from .models import [model]
+   admin.site.register([model])
+
+   Now the [Model] entry appears in the admin view
+
+
+

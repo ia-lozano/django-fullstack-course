@@ -1,0 +1,17 @@
+h1, h2 {
+    color: gray;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+table {
+    align-content: center;
+    margin: auto;
+    border: black 3px solid;
+}
+
+td {
+    border: solid black 1px;
+    background-color: lightgoldenrodyellow;
+}
