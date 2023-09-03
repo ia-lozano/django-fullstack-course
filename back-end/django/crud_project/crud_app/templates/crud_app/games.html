@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'crud_app/app_base.html' %}
+{% block body_block %}
+<div class="jumbotron">
+    <h1>Recommended games for {{ console_detail.name }}</h1>
+    
+    <!-- The 'games' variable name comes form the related_name in the models.py file -->
+    
+    <ol>
+    {% for game in console_detail.games.all %}
+        <li><p>{{ game.name }}, {{ game.release_year }}</p></li>
+    {% endfor %}
+    </ol>
+</div>
+<div class="container">
+    <a class="btn btn-success" href="{% url 'crud_app:add_game' %}">Add Game</a>
+    <a class="btn btn-warning" href="{% url 'crud_app:update' pk=console_detail.pk %}">Update Emulator</a>
+    <a class="btn btn-danger" href="{% url 'crud_app:delete' pk=console_detail.pk %}">Delete Console</a>
+</div>
+{% endblock %}

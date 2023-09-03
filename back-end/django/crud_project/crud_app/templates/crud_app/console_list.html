@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'crud_app/app_base.html' %}
+{% block body_block %}
+<div class="jumbotron">
+    <h1>Pick a console</h1>
+    {% for console in consoles %}
+    <ul>
+        <li><a href="{{ console.id }}">{{console.brand}} {{ console.name }}</a></li>
+        <li>Emulator: {{ console.emulator }}</li>
+    </ul>
+    {% endfor %}
+</div>
+<div class="container">
+    <a class="btn btn-success" href="{% url 'crud_app:create' %}">Add Console</a>
+</div>
+{% endblock %}

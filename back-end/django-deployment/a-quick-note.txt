@@ -1,0 +1,111 @@
+For Django deployment, we're going to be using a free account pythonanywhere.com and github.com
+
+Once registered in pythonanywhere.com, we'll open the bash console and write the following commands:
+
+Check Python version
+$ python --version
+
+Make a virtual environment, (with Python 3.10.5 and Django 4.1 in this case)
+
+$ mkvirtualenv --python=python3.10.5 [project_name]
+$ pip install -U django==4.1
+
+NOTE that you need to use the $ workon [env_name] to reactivate your virtuan environment
+
+We can check the all the installed packages in our environment with the following command:
+
+$ pip list
+
+Now we create a Git repo in our Django project directory [maindir/django_project] and push it to a Github repo
+with the following commands:
+
+> git init
+
+> git add .
+
+> git commit -m ["message"]
+
+> git remote add origin [HTTPS Github repo url]
+
+> git push origin main
+
+Now we're set.
+
+Let's go back to pythonanywhere.com Bash console and write the following command:
+
+$ git clone [Github repo url]
+
+Now you have the code from your Github repo within your Django environment
+
+cd into the django_project directory:
+
+$ ls
+
+$ [repo name]/[project name]
+
+you should see the (main) or (master) branch name
+
+Now, make migrations:
+
+$ python manage.py migrate
+$ python manage.py makemigrations
+$ python manage.py migrate
+
+And create a supersuer
+
+$ python manage.py createsuperuser
+
+We're done in the Bash console for now, go to the Web tab in your pythonanywhere account and
+add a new web app. Select the manual config and then go to the Virtualenv section, there,
+enter the next path:
+
+home/[your username]/.virtualenvs/[your venv name]
+
+now in the Code section, put the actual path to your code, if you dont remember it, go to the console,
+cd into your Django prject directory and write pwd command, it will return a line like this:
+
+/home/[your username]/[Github repo name]/[Django project name]
+
+Copy that path into the source code field.
+
+Now, go to the WSGI.py file and delete all the code
+and comment quit the comment from the next lines:
+
+import os
+import sys
+
+path = '/home/1000gec/django-deployment-example/template_project'
+if path not in sys.path:
+    sys.path.append(path)
+
+os.chdir(path)
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "template_project.settings")
+
+import django
+django.setup()
+
+from django.core.wsgi import get_wsgi_application
+application = get_wsgi_application()
+
+Make sure to add the 'yoursite.pythonanywhere.com' host to ALLOWED_HOSTS in your
+settings.py file.
+
+Once all the changes are made click on Reload yoursite.pythonanywhere.com
+
+Now set your static files in the Static files section so your admin site looks nice:
+
+URL: /static/admin
+
+Directory: /home/1000gec/.virtualenvs/myproj/lib/python3.10/site-packages/django/contrib/admin/static/admin
+
+The exact path depends on your username, project name, and python version.
+
+You can also link your static files:
+
+/static
+
+/home/1000gec/django-deployment-example/template_project/static
+
+DO NOT FORGET TO SET DEBUG = False in your settings.py file.
+

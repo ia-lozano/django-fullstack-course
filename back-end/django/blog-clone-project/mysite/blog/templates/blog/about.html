@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'blog/base.html' %}
+<!-- We're changing body_block by content, seems to work the same way -->
+{% block content %}
+<h1>About this Blog Webapp</h1>
+<div class="jumbotron">
+<ul>
+    <li><p>This site was built using Django 4.1</p></li>
+    <li><p>Simple blog webapp made with CRUD, CB and Function Django views</p></li>
+    <li><p>Fonts, styles and medium style are from various sources:</p>
+        <ul>
+            <li><p>fonts.google.com</p></li>
+            <li><p>codepen.io/thapliyalshivam</p></li>
+            <li><p>github.com/yabwe</p></li>
+        </ul>
+    </li>
+</ul>
+</div>
+{% endblock %}

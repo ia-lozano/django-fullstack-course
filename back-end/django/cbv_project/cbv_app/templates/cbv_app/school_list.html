@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'cbv_app/cbv_app_base.html' %}
+{% block body_block %}
+<h1>Welcome to a list of all the schools</h1>
+    <ol>
+        <!-- The school_list default name was overrided with  schools in the views -->
+        {% for school in schools %}
+        <!-- We did not define a Primary Key in the models.py file, so Django takes care
+             of it by giving an id to the database entries (which is a consecutive number) -->
+        <h2><li><a href="{{ school.id }}">{{ school.name }}</a></li></h2>
+        {% endfor %}
+    </ol>
+{% endblock %}
