@@ -1,6 +1,8 @@
 1. First of all, install Anaconda and add it to your system paths.
 To this by going to "Editing System Variables"(Windows only), then
-add the anaconda3/scripts path 
+add the anaconda3/scripts path. 
+
+NOTE: Add anaconda3/scripts path to the path SYSTEM VARIABLE, NOT THE USER VARIABLES!!!
 
 2. If you're using windows, set the system execution policy to
 unrestricted in powershell.
@@ -8,6 +10,9 @@ unrestricted in powershell.
 Something like: Set-ExecutionPolicy Unrestricted
 Or, just use the Anaconda command prompt... (not sure If
 Anaconda prompt will work the same...)
+
+Check the actual status of execution policy with:  Get-ExecutionPolicy -List
+You can force the command too: Set-ExecutionPolicy Unrestricted -Force
 
 3. Reference the Anaconda documentation about Environments, it goes
 like this:

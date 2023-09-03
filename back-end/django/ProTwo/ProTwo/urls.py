@@ -21,4 +21,5 @@ urlpatterns = [
     path('', views.landing, name="landing"),
     path("admin/", admin.site.urls),
     path('AppTwo/', include("AppTwo.urls")),
+    path("debug/", include("debug_toolbar.urls")),
 ]
